@@ -1,0 +1,339 @@
+/*Start Framework Of Project*/
+
+body {
+    font-family: var(--roboto-font);
+    color: var(--black-color);
+}
+
+:root {
+    --letter-space: 2px;
+    --box-header: 0 0 15px rgb(0 0 0 / 17%);
+    --box: 0 0 40px 5px rgb(0 0 0 / 5%);
+    --box-blog: 0 0 40px 5px rgb(0 0 0 / 5%);
+    --jost-font: 'Jost', sans-serif;
+    --roboto-font: 'Roboto', sans-serif;
+    --white-color: #fff;
+    --footer-back: #000f38;
+    --main-color: #01a5c0;
+    --main-color-opacity: #eff8fb;
+    --main-color-alt: #eff8fb;
+    --gray-color: #9c9fa1;
+    --black-color: #243238;
+}
+
+address span {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: var(--main-color);
+}
+
+address h3 {
+    font-size: 45px;
+    font-weight: var(--fontW700);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--jost-font);
+}
+
+
+/*Start Inputs Style*/
+
+input,
+textarea {
+    outline: none;
+    border: 2px solid #ccc;
+    font-size: 18px;
+    border-radius: 10px;
+    width: 100%;
+    padding: 14px 20px;
+    transition: var(--tran);
+    background-color: transparent;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--gray-color);
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--main-color);
+}
+
+
+/*End Inputs Style*/
+
+
+/*Start Single Pages*/
+
+.details>div {
+    background-color: var(--main-color-opacity);
+    padding: 40px;
+    gap: 50px;
+    border-radius: 10px;
+}
+
+.details .cat ul {
+    gap: 20px;
+}
+
+.details .cat ul li {
+    font-size: 18px;
+    color: var(--black-color);
+    font-weight: var(--fontW700);
+    transition: var(--tran);
+    position: relative;
+}
+
+.details .cat ul li:hover {
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+.details .cat ul li:not(:last-child) {
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--gray-color);
+}
+
+.details .cat ul li>a {
+    transition: var(--tran);
+    gap: 10px;
+    color: var(--black-color);
+}
+
+.details .cat ul li:hover>a {
+    color: var(--main-color);
+    transform: translateX(10px);
+}
+
+ul.checks {
+    gap: 10px;
+}
+
+ul.checks li {
+    gap: 10px;
+    font-size: 18px;
+}
+
+ul.checks li .icon i {
+    color: var(--main-color);
+}
+
+
+/*End Single Pages*/
+
+
+/*Start Button Style*/
+
+button {
+    outline: none;
+    border: none;
+    width: fit-content;
+    padding: 15px 15px;
+    border-radius: 30px;
+    background-color: var(--main-color);
+    color: var(--white-color);
+    font-size: 18px !important;
+    font-weight: var(--fontW700);
+    text-transform: uppercase !important;
+    gap: 10px;
+    position: relative;
+    overflow: hidden !important;
+}
+
+button span {
+    flex-wrap: nowrap;
+}
+
+button span,
+button i {
+    position: relative;
+    z-index: 2;
+}
+
+button::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    background-color: var(--black-color);
+    width: 12px;
+    height: 12px;
+    left: 2px;
+    border-radius: 50%;
+    transition: var(--tran);
+    z-index: 0;
+}
+
+button.white::after {
+    background-color: var(--white-color);
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+button.white:hover {
+    color: var(--main-color);
+}
+
+button.white:hover {
+    color: var(--main-color);
+}
+
+button:hover::after {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 0px;
+}
+
+button.white:hover::after {
+    background-color: var(--white-color);
+}
+
+button.basic {
+    color: var(--black-color);
+    background-color: var(--white-color);
+}
+
+button.basic:hover {
+    background-color: var(--black-color);
+    color: var(--white-color);
+}
+
+button.basic::after {
+    display: none;
+}
+
+button.basic:hover::after {
+    display: none;
+}
+
+button.down {
+    background-color: var(--main-color-opacity);
+    color: var(--black-color);
+    width: 100%;
+    justify-content: flex-start;
+    transition: var(--tran);
+    border: 3px solid var(--main-color);
+}
+
+button.down:hover {
+    background-color: var(--main-color);
+    color: var(--white-color);
+}
+
+button.down::after {
+    display: none;
+}
+
+
+/*End Button Style*/
+
+
+/*Start Swip Up Icon*/
+
+.swip .icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    color: var(--white-color);
+    font-size: 20px;
+    position: fixed;
+    bottom: 20px;
+    transition: var(--tran);
+    right: 40px;
+    z-index: 1000;
+}
+
+.swip .icon:hover {
+    cursor: pointer;
+}
+
+
+/*End Swip Up Icon*/
+
+
+/*End Framework Of Project*/
+
+
+/*Start Responsive Of Project Framework*/
+
+@media (max-width:992px) {
+    address h3 {
+        font-size: 35px;
+    }
+    button {
+        padding: 15px 18px;
+        border-radius: 25px;
+        font-size: 15px !important;
+        gap: 8px;
+    }
+    button::after {
+        width: 10px;
+        height: 10px;
+    }
+    button:hover::after {
+        border-radius: 25px;
+    }
+    .blogDetails .contain .details>div {
+        padding: 30px;
+        gap: 40px;
+        border-radius: 8px;
+    }
+    .blogDetails .contain .details .cat ul li {
+        font-size: 16px;
+    }
+    .blogDetails .contain .details .cat ul li:not(:last-child) {
+        padding-bottom: 12px;
+    }
+    ul.checks li {
+        font-size: 16px;
+    }
+}
+
+@media (max-width:768px) {
+    address h3 {
+        font-size: 30px;
+    }
+    button {
+        padding: 12px 18px;
+        border-radius: 20px;
+        font-size: 14px !important;
+        gap: 5px;
+    }
+    button::after {
+        width: 8px;
+        height: 8px;
+    }
+    button:hover::after {
+        border-radius: 20px;
+    }
+    .blogDetails .contain .details>div {
+        padding: 25px;
+        gap: 35px;
+        border-radius: 6px;
+    }
+    .blogDetails .contain .details .cat ul li {
+        font-size: 15px;
+    }
+    .blogDetails .contain .details .cat ul li:not(:last-child) {
+        padding-bottom: 10px;
+    }
+    ul.checks li {
+        font-size: 15px;
+    }
+}
+
+
+/*End Responsive Of Project Framework*/

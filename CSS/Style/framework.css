@@ -1,0 +1,224 @@
+/*Start Framework*/
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --tran: ease-in-out all .3s;
+    --pad50: 50px;
+    --pad80: 80px;
+    --pad100: 100px;
+    --pad150: 150px;
+    --pad200: 200px;
+    --fontW100: 100;
+    --fontW200: 200;
+    --fontW300: 300;
+    --fontW400: 400;
+    --fontW500: 500;
+    --fontW600: 600;
+    --fontW700: 700;
+    --fontW800: 800;
+    --fontW900: 900;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.contain {
+    padding-top: var(--pad100);
+    padding-bottom: var(--pad100);
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+p {
+    line-height: 1.5;
+    font-size: 18px;
+}
+
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 10, 22, 0.6);
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+address {
+    font-style: normal;
+    gap: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.center-x-y {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: relative;
+    text-align: center;
+}
+
+.center-x {
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+    text-align: center;
+}
+
+.center-y {
+    top: 50%;
+    transform: translatey(-50%);
+    position: relative;
+    text-align: center;
+}
+
+.grid {
+    align-items: center;
+    display: grid;
+}
+
+.flex {
+    align-items: center;
+    display: flex;
+}
+
+.center {
+    justify-content: center;
+}
+
+.between {
+    justify-content: space-between;
+}
+
+.around {
+    justify-content: space-around;
+}
+
+.start {
+    justify-content: flex-start;
+}
+
+.end {
+    justify-content: flex-end;
+}
+
+.stretch {
+    justify-content: stretch;
+}
+
+.hide {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--tran);
+}
+
+.over-hide-body {
+    overflow: hidden;
+}
+
+
+/*End Framework*/
+
+
+/*Start Responsive*/
+
+@media (max-width:1200px) {
+    .contain {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+}
+
+@media (max-width:992px) {
+    .contain {
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-top: var(--pad80);
+        padding-bottom: var(--pad80);
+    }
+    p {
+        font-size: 17px;
+    }
+    address {
+        gap: 15px;
+    }
+    address span {
+        font-size: 18px;
+    }
+    address h3 {
+        font-size: 35px;
+    }
+    button {
+        padding: 15px 20px;
+        border-radius: 25px;
+        font-size: 16px;
+        gap: 8px;
+    }
+    button::after {
+        width: 10px;
+        height: 10px;
+    }
+    button:hover::after {
+        border-radius: 25px;
+    }
+}
+
+@media (max-width:768px) {
+    .contain {
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: var(--pad50);
+        padding-bottom: var(--pad50);
+    }
+    p {
+        font-size: 16px;
+    }
+    address {
+        gap: 10px;
+    }
+    address span {
+        font-size: 16px;
+    }
+    address h3 {
+        font-size: 30px;
+    }
+    button {
+        padding: 12px 18px;
+        border-radius: 20px;
+        font-size: 15px;
+        gap: 5px;
+    }
+    button::after {
+        width: 8px;
+        height: 8px;
+    }
+    button:hover::after {
+        border-radius: 20px;
+    }
+}
+
+
+/*End Responsive*/
